@@ -5,9 +5,6 @@ import TaskItem from '../TaskItem/TaskItem.tsx'
 //conditional for empty states
 const TaskList: React.FC<TaskListProps> = ({ tasks, onStatusChange, onDelete, onAddTask }) => {
 const [selectedPriority, setSelectedPriority] = useState<'low' | 'medium' | 'high'>('medium');
-    if (tasks.length === 0) {
-        return <p>No Tasks Found.</p>;
-    }
 
 return (
     <div className="task-list-container">
@@ -30,9 +27,20 @@ return (
             </button>
         </div>
 
-        {tasks.map((task) => (
-            <TaskItem key={task.id} task={task} onStatusChange={onStatusChange} onDelete={onDelete} />
-        ))}
+        {tasks.length === 0 ? (
+            <p style={{ textAlign: 'center', color: '#666' }}>No Tasks Matching Your Filters.</p>
+        ) : (
+            <div className='task-items-wrapper'>
+                {tasks.map((task) => (
+                    <TaskItem
+                    key={task.id} 
+                    task={task} 
+                    onStatusChange={onStatusChange} 
+                    onDelete={onDelete}
+                    />
+                ))}
+            </div>
+        )}
     </div>
 );
 };
