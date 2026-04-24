@@ -1,75 +1,66 @@
-# React + TypeScript + Vite
+# Component Creation and Props
+This lab will help you practice building components that work with dynamic data and implement proper React patterns for list rendering.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of contents
 
-Currently, two official plugins are available:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+  - [AI Collaboration](#ai-collaboration)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-## React Compiler
+## Overview
+In this lab, you will create a Task Management application that demonstrates dynamic list rendering, proper key usage, and conditional rendering. You will practice creating TypeScript React components that handle lists of data, implement filtering, and show different states based on task properties. This lab focuses on list rendering, key management, conditional rendering, and component composition using React and TypeScrip
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### The challenge
 
-Note: This will impact Vite dev & build performances.
+-Create components that render lists of data with proper key management.
+-Implement filtering and sorting of list items.
+-Use conditional rendering to show different states based on item properties.
+-Apply TypeScript interfaces for type safety.
+-Implement proper component composition and prop handling.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Links
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Assignment URL: https://ps-lms.vercel.app/curriculum/se/415/lab-3
+- Github URL: https://github.com/traceynicole71-cloud/Lab9.3-Lists-Keys-Conditionals.git
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## My process
+ My process was to create code by following the activity tasks step-by-step.
+### Built with
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- React
+- CSS
+- Tailwind
+- Typescript
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### What I learned
+
+I learned how to build components that work with dynamic data and implement proper React patterns for list rendering.
+
+### Continued development
+
+Continued development for me is to pay attention to importing and exporting that links each code file to the appropriate others. 
+
+### Useful resources
+
+- [Austin Davis Youtube tutorial] https://www.youtube.com/watch?v=nzPUbRPVp5U
+- [Figma Hex Color Codes] https://www.figma.com/colors/hot-pink/
+
+### AI Collaboration
+
+I used Google Gemini to ask questions about setting up the optional TaskList component that adds a new task to the list. I also used it to learn to use the crypto.randomUUID() method in this activity to ensure unique keys when creating new task objects in the state.  I also used the recommended TS pop-up coding corrections that were provided in VS Code.  They helped me to catch case and other type errors to make the page function properly.
+
+## Acknowledgments
+
