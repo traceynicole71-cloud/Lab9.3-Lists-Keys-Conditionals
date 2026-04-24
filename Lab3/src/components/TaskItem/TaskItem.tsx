@@ -1,5 +1,5 @@
 import React from 'react';
-import { TaskItemProps, TaskStatus } from '../../types/index.ts'
+import type { TaskItemProps, TaskStatus } from '../../types/index.ts'
 
 const TaskItem: React.FC<TaskItemProps> = ({ task, onStatusChange, onDelete }) => {
   //colors for priority

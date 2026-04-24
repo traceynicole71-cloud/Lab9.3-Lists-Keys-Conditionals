@@ -1,17 +1,17 @@
 import React from 'react';
-import { TaskListProps } from '../../types/index.ts'
+import type { TaskListProps } from '../../types/index.ts'
 import TaskItem from '../TaskItem/TaskItem.tsx'
 
 //conditional for empty states
-const TaskList: React.FC<TaskListProps> = ({ task, onStatusChange, onDelete }) => {
+const TaskList: React.FC<TaskListProps> = ({ tasks, onStatusChange, onDelete }) => {
 
-    if (TaskSignal.length === 0) {
+    if (tasks.length === 0) {
         return <p>No Tasks Found.</p>;
     }
 
 return (
     <div className="task-list">
-        {Tasks.map((task) => (
+        {tasks.map((task) => (
             <TaskItem
             key={task.id}
             task={task}

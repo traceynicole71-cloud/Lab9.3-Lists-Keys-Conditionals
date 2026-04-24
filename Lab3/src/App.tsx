@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Task, TaskStatus } from './types/index.ts'
+import type { Task, TaskStatus } from './types/index.ts'
 import TaskList from './components/TaskList/TaskList';
 import TaskFilter from './components/TaskFilter/TaskFilter';
 import './App.css'

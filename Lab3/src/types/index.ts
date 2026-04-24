@@ -13,6 +13,7 @@ export interface TaskListProps {
   tasks: Task[];
   onStatusChange: (taskId: string, newStatus: TaskStatus) => void;
   onDelete: (taskId: string) => void;
+  onAddTask: () => void;
 }
 
 export interface TaskItemProps {
