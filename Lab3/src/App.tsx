@@ -43,15 +43,23 @@ const handleAddTask = (priority: 'low' | 'medium' | 'high' ) => {
   setTasks(prev => [newTask, ...prev]);
 };
   return (
-   <div className="App">
-    <TaskFilter onFilterChange={handleFilterChange} />
-      <TaskList
-      tasks={filteredTasks}
-onStatusChange={handleStatusChange}
-onDelete={handleDelete}
-onAddTask={handleAddTask}
-/>
-   </div>
+    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px', fontFamily: 'san-serif' }}>
+      <header style={{ textAlign: 'center', marginBottom: '40px' }}>
+        <h1 style={{ fontSize: '2.5rem', color: '#ff69b4', borderBottom: '2px solid #4caf50', display: 'inline-block', paddingBottom: '10px' }}>
+          MY TASK MANAGER
+        </h1>
+        <p style={{ color: '#ff69b4' }}>Let's Organize You Day...One Task At A Time!</p>
+      </header>
+      <div className="App">
+        <TaskFilter onFilterChange={handleFilterChange} />
+        <TaskList
+          tasks={filteredTasks}
+          onStatusChange={handleStatusChange}
+          onDelete={handleDelete}
+          onAddTask={handleAddTask}
+        />
+      </div>
+    </div>
   );
 }
 export default App
