@@ -11,7 +11,7 @@ return (
         <div style={{ marginBottom: '20px', textAlign: 'center' }}>
             <select
             value={selectedPriority}
-            onChange={(e) => setSelectedPriority(e.target.value as any)}
+            onChange={(e) => setSelectedPriority(e.target.value as 'low' | 'medium' | 'high')}
             style={{ padding: '10px' }}
                 >
                 <option value="low">Low</option>
